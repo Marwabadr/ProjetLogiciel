@@ -1,5 +1,8 @@
 package com.example.demo.Models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 
 /**
  * @author Lenovo
@@ -11,12 +14,20 @@ public class Besoin {
 	private String description;
 	private String nom;
 	public Enseignant m_Enseignant;
+	@Id
+	private Long id;
 
 	public Besoin(){
 
 	}
 
-	public void finalize() throws Throwable {
 
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getId() {
+		return id;
 	}
 }//end Besoin

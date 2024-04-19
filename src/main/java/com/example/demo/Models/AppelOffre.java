@@ -1,6 +1,11 @@
 package com.example.demo.Models;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+import java.sql.Date;
+@Entity
 /**
  * @author Lenovo
  * @version 1.0
@@ -10,12 +15,19 @@ public class AppelOffre {
 
 	private Date date_debut;
 	private Date date_fin;
+	@Id
+	private Long id;
 
 	public AppelOffre(){
 
 	}
 
-	public void finalize() throws Throwable {
 
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getId() {
+		return id;
 	}
 }//end AppelOffre
