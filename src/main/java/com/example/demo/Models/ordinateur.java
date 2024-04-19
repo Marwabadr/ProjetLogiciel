@@ -9,7 +9,7 @@ package com.example.demo.Models;
 public class ordinateur extends Ressource {
 
 	private int CPU;
-	private int Disque dur;
+	private int Disquedur;
 	private int ecran;
 	private int RAM;
 
