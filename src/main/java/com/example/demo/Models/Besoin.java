@@ -1,5 +1,6 @@
 package com.example.demo.Models;
 
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 import javax.persistence.Entity;
@@ -18,8 +19,8 @@ public class Besoin {
 	private String description;
 	private String nom;
 
-	@ManyToOne
-	private Enseignant enseignant;
+
+
 
 
 
@@ -51,12 +52,5 @@ public class Besoin {
 
 	public void setNom(String nom) {
 		this.nom = nom;
-	}
-	public Enseignant getEnseignant() {
-		return enseignant;
-	}
-
-	public void setEnseignant(Enseignant enseignant) {
-		this.enseignant = enseignant;
 	}
 }

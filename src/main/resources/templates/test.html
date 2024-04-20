@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/soumission" method="post">
+    <div>
+        <label>Date de la livraison</label>
+        <label for="dateL"></label><input type="date" id="dateL" name="dateLivraison">
+    </div>
+    <div>
+        <label>Durée de garantie</label>
+        <label for="dureeGarantie"></label><input type="text" id="dureeGarantie" name="dureeGarantie">
+    </div>
+    <div>
+        <label>Description</label>
+        <label for="description"></label><textarea id="description" name="description" rows="4"></textarea>
+    </div>
+    <button type="submit">Envoyer</button>
+    <button type="button" onclick="window.location.href='/soumission.html'">Annuler</button>
+</form>
+</body>
+</html>
