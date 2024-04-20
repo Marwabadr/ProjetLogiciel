@@ -3,7 +3,6 @@ package com.example.demo.Config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 
 @Configuration
@@ -19,5 +18,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .addResourceLocations("classpath:/templates/vendors/");
         registry.addResourceHandler("/images/**")
                 .addResourceLocations("classpath:/templates/images/");
+        registry.addResourceHandler("/pages/**")
+                .addResourceLocations("classpath:/templates/pages/");
+        registry.addResourceHandler("/documentation/**")
+                .addResourceLocations("classpath:/templates/documentation/");
     }
 }
