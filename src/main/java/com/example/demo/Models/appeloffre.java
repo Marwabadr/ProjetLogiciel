@@ -1,5 +1,3 @@
-
-
 package com.example.demo.Models;
 
 import javax.persistence.Entity;
@@ -14,34 +12,34 @@ import java.util.Date;
 @Table(name = "appeloffre")
 public class AppelOffre {
 
-	private Date dateDebut;
-	private Date dateFin;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int  AppeloffreID;
+    private Date dateDebut;
+    private Date dateFin;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int  AppeloffreID;
 
 
-	public Date getDateDebut() {
-		return dateDebut;
-	}
+    public Date getDateDebut() {
+        return dateDebut;
+    }
 
-	public void setDateDebut(Date dateDebut) {
-		this.dateDebut = dateDebut;
-	}
+    public void setDateDebut(Date dateDebut) {
+        this.dateDebut = dateDebut;
+    }
 
-	public Date getDateFin() {
-		return dateFin;
-	}
+    public Date getDateFin() {
+        return dateFin;
+    }
 
-	public void setDateFin(Date dateFin) {
-		this.dateFin = dateFin;
-	}
+    public void setDateFin(Date dateFin) {
+        this.dateFin = dateFin;
+    }
 
-	public int getAppelOffreId() {
-		return  AppeloffreID;
-	}
+    public int getAppelOffreId() {
+        return  AppeloffreID;
+    }
 
-	public void setAppelOffreId(int appelOffreId) {
-		this. AppeloffreID = appelOffreId;
-	}
+    public void setAppelOffreId(int appelOffreId) {
+        this. AppeloffreID = appelOffreId;
+    }
 }
