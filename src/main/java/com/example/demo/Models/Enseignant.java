@@ -35,6 +35,7 @@ public class Enseignant extends personne { // Assurez-vous que la classe Enseign
 		return departementID;
 	}
 
+
 	public void setDepartementID(Integer departementID) {
 		this.departementID = departementID;
 	}
@@ -45,5 +46,4 @@ public class Enseignant extends personne { // Assurez-vous que la classe Enseign
 
 	public void setNomEnseignant(String nomEnseignant) {
 		this.nomEnseignant = nomEnseignant;
-	}
-}
+	}}
