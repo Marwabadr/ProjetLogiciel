@@ -9,13 +9,21 @@ import jakarta.persistence.Id;
  * @version 1.0
  * @created 19-avr.-2024 14:25:20
  */
-public class Besoin {
 
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+
+@Entity
+public class Besoin {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String description;
 	private String nom;
-	public Enseignant m_Enseignant;
-	@Id
-	private Long id;
+
+
 
 	public Besoin(){
 
@@ -29,5 +37,21 @@ public class Besoin {
 
 	public Long getId() {
 		return id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 }//end Besoin
