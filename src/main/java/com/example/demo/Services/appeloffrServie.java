@@ -1,7 +1,7 @@
 package com.example.demo.Services;
 
 import com.example.demo.Models.AppelOffre;
-import com.example.demo.repositories.AppelOffreRep;
+import com.example.demo.Repositories.AppelOffreRep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
