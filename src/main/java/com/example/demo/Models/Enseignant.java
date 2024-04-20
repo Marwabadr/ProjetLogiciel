@@ -28,4 +28,3 @@ public class Enseignant extends personne {
 		return id;
 	}
 }
-
