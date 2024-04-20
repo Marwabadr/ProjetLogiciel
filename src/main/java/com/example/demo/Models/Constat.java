@@ -1,8 +1,8 @@
 package com.example.demo.Models;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+
 
 import java.sql.Date;
 

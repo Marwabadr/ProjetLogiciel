@@ -1,21 +1,26 @@
 package com.example.demo.Controllers;
 
-import com.example.demo.Models.appeloffre;
-import com.example.demo.repositories.AppelOffreRep;
+import com.example.demo.Models.AppelOffre;
+import com.example.demo.Services.appeloffrServie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
 @Controller
 public class AppelOffreController {
     @Autowired
-    private AppelOffreRep appelOffreRep;
+    private appeloffrServie service;
 
-    @GetMapping("/appeloffre")
+    @GetMapping("/fournisseur/{id}")
     public String getAppelOffre(Model model) {
-        appeloffre appelOffre = appelOffreRep.findById(1).orElse(null); // Suppose que l'appel d'offre a l'ID 1
+        AppelOffre appelOffre = service.get(1);
         model.addAttribute("appelOffre", appelOffre);
+
+        // Ajout d'un message de journalisation pour vérifier l'objet AppelOffre
+        System.out.println("AppelOffre récupéré : " + appelOffre);
+
         return "fournisseur";
     }
 }

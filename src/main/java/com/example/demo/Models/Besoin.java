@@ -4,17 +4,25 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+
 @Entity
 public class Besoin {
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String description;
 	private String nom;
 
 	@ManyToOne
 	private Enseignant enseignant;
 
-	@Id
-	private Long id;
+
+
+
 
 	public Besoin() {
 
@@ -43,7 +51,6 @@ public class Besoin {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-
 	public Enseignant getEnseignant() {
 		return enseignant;
 	}

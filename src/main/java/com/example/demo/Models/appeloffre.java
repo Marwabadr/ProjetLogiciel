@@ -1,36 +1,47 @@
+
+
 package com.example.demo.Models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Date;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 
-import java.sql.Date;
-
-
-/**
- * @author Lenovo
- * @version 1.0
- * @created 19-avr.-2024 14:25:17
- */
 @Entity
-public class appeloffre {
+@Table(name = "appeloffre")
+public class AppelOffre {
 
-    private Date Date_debut;
-    private Date Date_fin;
-    @Id
-    private Long AppeloffreID;
-
-    public appeloffre(){
-
-    }
+	private Date dateDebut;
+	private Date dateFin;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int  AppeloffreID;
 
 
+	public Date getDateDebut() {
+		return dateDebut;
+	}
 
-    public void setId(Long id) {
-        this.AppeloffreID = id;
-    }
+	public void setDateDebut(Date dateDebut) {
+		this.dateDebut = dateDebut;
+	}
 
-    public Long getId() {
-        return AppeloffreID;
-    }
-}//end AppelOffre
+	public Date getDateFin() {
+		return dateFin;
+	}
+
+	public void setDateFin(Date dateFin) {
+		this.dateFin = dateFin;
+	}
+
+	public int getAppelOffreId() {
+		return  AppeloffreID;
+	}
+
+	public void setAppelOffreId(int appelOffreId) {
+		this. AppeloffreID = appelOffreId;
+	}
+}

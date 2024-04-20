@@ -11,13 +11,10 @@ public class Proposition {
 	private String etat;
 	private String motif;
 	public Fournisseur m_Fournisseur;
-	public appeloffre m_AppelOffre;
+	public AppelOffre m_AppelOffre;
 
 	public Proposition(){
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
 }//end Proposition

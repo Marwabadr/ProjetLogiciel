@@ -11,7 +11,7 @@ public class Ressource {
 	private String marque;
 	private int numRessource;
 	public Enseignant m_Enseignant;
-	public appeloffre m_AppelOffre;
+	public AppelOffre m_AppelOffre;
 
 	public Ressource(){
 
