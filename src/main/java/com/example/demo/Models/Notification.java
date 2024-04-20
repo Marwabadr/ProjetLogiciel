@@ -1,6 +1,8 @@
 package com.example.demo.Models;
 
 
+import java.sql.Date;
+
 /**
  * @author Lenovo
  * @version 1.0
@@ -16,7 +18,5 @@ public class Notification {
 
 	}
 
-	public void finalize() throws Throwable {
 
-	}
 }//end Notification

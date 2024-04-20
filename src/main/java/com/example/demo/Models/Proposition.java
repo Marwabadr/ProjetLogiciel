@@ -11,7 +11,7 @@ public class Proposition {
 	private String etat;
 	private String motif;
 	public Fournisseur m_Fournisseur;
-	public AppelOffre m_AppelOffre;
+	public appeloffre m_AppelOffre;
 
 	public Proposition(){
 
