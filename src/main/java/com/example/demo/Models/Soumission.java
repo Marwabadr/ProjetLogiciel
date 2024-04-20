@@ -1,4 +1,6 @@
 package com.example.demo.Models;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +12,8 @@ public class Soumission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date date_livraison;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date dateLivraison;
     private Integer duree_garantie;
     private String description;
 
@@ -23,13 +26,14 @@ public class Soumission {
         this.id = id;
     }
 
-    public Date getDate_livraison() {
-        return date_livraison;
+    public Date getDateLivraison() {
+        return dateLivraison;
     }
 
     public void setDateLivraison(Date dateLivraison) {
-        this.date_livraison = dateLivraison;
+        this.dateLivraison = dateLivraison;
     }
+
 
     public Integer getDureeGarantie() {
         return duree_garantie;
