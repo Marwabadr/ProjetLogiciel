@@ -1,30 +1,49 @@
 package com.example.demo.Models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
-import java.util.List;
 
 @Entity
-public class Enseignant extends personne {
+public class Enseignant extends personne { // Assurez-vous que la classe Enseignant hérite correctement de la classe personne
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	@Column(name = "EnseignantID") // Spécifie le nom de la colonne de l'ID
+	private Integer enseignantID; // Modifie le type de données pour correspondre à la colonne EnseignantID
 
+	@Column(name = "DepartementID") // Spécifie le nom de la colonne du département ID
+	private Integer departementID;
 
+	@Column(name = "nomEnseignant") // Spécifie le nom de la colonne du nom de l'enseignant
+	private String nomEnseignant; // Ajoute la nouvelle colonne nomEnseignant
+
+	// Constructeur par défaut
 	public Enseignant() {
-
+		super(); // Appel du constructeur de la classe parente personne
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	// Getters et setters
+	public Integer getEnseignantID() {
+		return enseignantID;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setEnseignantID(Integer enseignantID) {
+		this.enseignantID = enseignantID;
 	}
 
-	public Long getId() {
-		return id;
+	public Integer getDepartementID() {
+		return departementID;
+	}
+
+	public void setDepartementID(Integer departementID) {
+		this.departementID = departementID;
+	}
+
+	public String getNomEnseignant() {
+		return nomEnseignant;
+	}
+
+	public void setNomEnseignant(String nomEnseignant) {
+		this.nomEnseignant = nomEnseignant;
 	}
 }

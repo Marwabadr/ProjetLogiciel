@@ -12,27 +12,34 @@ import java.util.Date;
 @Table(name = "appeloffre")
 public class AppelOffre {
 
-    private Date dateDebut;
-    private Date dateFin;
+    private Date Date_debut;
+    private Date Date_fin;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  AppeloffreID;
 
-
-    public Date getDateDebut() {
-        return dateDebut;
+    public Date getDate_debut() {
+        return Date_debut;
     }
 
-    public void setDateDebut(Date dateDebut) {
-        this.dateDebut = dateDebut;
+    public void setDate_debut(Date date_debut) {
+        Date_debut = date_debut;
     }
 
-    public Date getDateFin() {
-        return dateFin;
+    public Date getDate_fin() {
+        return Date_fin;
     }
 
-    public void setDateFin(Date dateFin) {
-        this.dateFin = dateFin;
+    public void setDate_fin(Date date_fin) {
+        Date_fin = date_fin;
+    }
+
+    public int getAppeloffreID() {
+        return AppeloffreID;
+    }
+
+    public void setAppeloffreID(int appeloffreID) {
+        AppeloffreID = appeloffreID;
     }
 
     public int getAppelOffreId() {
