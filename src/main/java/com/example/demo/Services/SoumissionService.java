@@ -2,7 +2,7 @@ package com.example.demo.Services;
 
 
 import com.example.demo.Models.Soumission;
-import com.example.demo.repositories.SoumissionRepository;
+import com.example.demo.Repositories.SoumissionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

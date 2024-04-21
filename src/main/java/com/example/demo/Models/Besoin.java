@@ -1,14 +1,9 @@
 package com.example.demo.Models;
-
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+
 
 
 import javax.persistence.Entity;
@@ -21,8 +16,13 @@ public class Besoin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
 	private String description;
 	private String nom;
+	private Integer besoinID;
+	private Integer enseignantID;
+	private Integer quantite; // Nouvel attribut
+
 	private Long ordinateurId; // Champ pour stocker l'ID de l'ordinateur
 	private Long imprimanteId; // Champ pour stocker l'ID de l'imprimante
 
@@ -36,6 +36,13 @@ public class Besoin {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
+
+
+
+	// Getters et setters
+
+
 
 	public String getDescription() {
 		return description;
@@ -53,6 +60,7 @@ public class Besoin {
 		this.nom = nom;
 	}
 
+
 	public Long getOrdinateurId() {
 		return ordinateurId;
 	}
@@ -68,4 +76,31 @@ public class Besoin {
 	public void setImprimanteId(Long imprimanteId) {
 		this.imprimanteId = imprimanteId;
 	}
+
+	public Integer getBesoinID() {
+		return besoinID;
+	}
+
+	public void setBesoinID(Integer besoinID) {
+		this.besoinID = besoinID;
+	}
+
+	public Integer getEnseignantID() {
+		return enseignantID;
+	}
+
+	public void setEnseignantID(Integer enseignantID) {
+		this.enseignantID = enseignantID;
+	}
+
+	public Integer getQuantite() {
+		return quantite;
+	}
+
+	public void setQuantite(Integer quantite) {
+		this.quantite = quantite;
+	}
 }
+
+
+

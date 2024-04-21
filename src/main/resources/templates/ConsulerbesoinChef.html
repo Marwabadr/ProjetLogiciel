@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <!-- Required meta tags -->
@@ -161,24 +161,26 @@
                                         <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Enseignant</th>
-                                            <th>Description de besoin</th>
-                                            <th>Quantité</th>
+                                            <th>Description</th>
+                                            <th>Nom du besoin</th>
+                                            <th>Quantite</th>
+                                            <th>Nom de l'enseignant</th>
                                             <th>Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>John Doe</td>
-                                            <td>Besoin de stylos</td>
-                                            <td>100</td>
+                                        <tr th:each="besoin : ${besoins}">
+                                            <td th:text="${besoin.besoinID}"></td>
+                                            <td th:text="${besoin.description}"></td>
+                                            <td th:text="${besoin.nomBesoin}"></td>
+                                            <td th:text="${besoin.quantite}"></td>
+                                            <td th:text="${besoin.nomEnseignant}"></td>
                                             <td>
                                                 <button class="btn btn-primary">Modifier</button>
                                                 <button class="btn btn-danger">Supprimer</button>
                                             </td>
+
                                         </tr>
-                                        <!-- Ajoutez d'autres lignes ici -->
                                         </tbody>
                                     </table>
                                 </div>
