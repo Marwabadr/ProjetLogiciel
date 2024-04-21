@@ -85,6 +85,3 @@ public class Besoin {
 		this.quantite = quantite;
 	}
 }
-
-
-
