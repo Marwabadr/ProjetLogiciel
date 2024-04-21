@@ -1,4 +1,4 @@
-package com.example.demo.Repositories;
+package com.example.demo.repositories;
 
 import com.example.demo.Models.AppelOffre;
 import org.springframework.data.jpa.repository.JpaRepository;
