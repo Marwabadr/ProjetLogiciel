@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BesoinEnsRepository extends JpaRepository<Besoin, Long> {
+public interface BesoinRepository extends JpaRepository<Besoin, Long> {
     // Méthodes de recherche supplémentaires si nécessaire
 }
+
