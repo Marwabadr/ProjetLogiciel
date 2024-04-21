@@ -11,6 +11,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 @Entity
 public class Besoin {
 	@Id
@@ -18,24 +23,18 @@ public class Besoin {
 	private Long id;
 	private String description;
 	private String nom;
-
-
-
-
-
-
-
+	private Long ordinateurId; // Champ pour stocker l'ID de l'ordinateur
+	private Long imprimanteId; // Champ pour stocker l'ID de l'imprimante
 
 	public Besoin() {
-
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public Long getId() {
 		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getDescription() {
@@ -52,5 +51,21 @@ public class Besoin {
 
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+
+	public Long getOrdinateurId() {
+		return ordinateurId;
+	}
+
+	public void setOrdinateurId(Long ordinateurId) {
+		this.ordinateurId = ordinateurId;
+	}
+
+	public Long getImprimanteId() {
+		return imprimanteId;
+	}
+
+	public void setImprimanteId(Long imprimanteId) {
+		this.imprimanteId = imprimanteId;
 	}
 }

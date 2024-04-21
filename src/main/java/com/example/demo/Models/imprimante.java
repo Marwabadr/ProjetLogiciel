@@ -6,16 +6,51 @@ package com.example.demo.Models;
  * @version 1.0
  * @created 19-avr.-2024 14:25:01
  */
-public class imprimante extends Ressource {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-	private int resolution;
-	private int vitesse;
+@Entity
+public class imprimante {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String marque;
+	private String vitesseImpression;
+	private String resolution;
 
-	public imprimante(){
+	// Constructeurs, getters et setters
 
+	public Long getId() {
+		return id;
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	public String getMarque() {
+		return marque;
 	}
-}//end imprimante
+
+	public String getVitesseImpression() {
+		return vitesseImpression;
+	}
+
+	public String getResolution() {
+		return resolution;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setMarque(String marque) {
+		this.marque = marque;
+	}
+
+	public void setVitesseImpression(String vitesseImpression) {
+		this.vitesseImpression = vitesseImpression;
+	}
+
+	public void setResolution(String resolution) {
+		this.resolution = resolution;
+	}
+}

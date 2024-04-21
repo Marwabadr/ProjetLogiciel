@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class BesoinEnsService {
 
 
-    @Autowired
+
     private  BesoinEnsRepository besoinRepository;
 
     public void ajouterBesoin(Besoin besoin) {
