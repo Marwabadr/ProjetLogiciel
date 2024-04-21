@@ -12,6 +12,13 @@ public class EquipementService {
     private static OrdinateurRepository ordinateurRepository;
     private static ImprimanteRepository imprimanteRepository;
 
+
+    @Autowired
+    public EquipementService(OrdinateurRepository ordinateurRepository, ImprimanteRepository imprimanteRepository) {
+        this.ordinateurRepository = ordinateurRepository;
+        this.imprimanteRepository = imprimanteRepository;
+    }
+
     public static Long ajouterOrdinateur(ordinateur ordinateur) {
         return ordinateurRepository.save(ordinateur).getId();
     }

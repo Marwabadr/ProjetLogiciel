@@ -10,8 +10,7 @@ public class Ressource {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "Marque")
-	private String marque;
+
 
 	@Column(name = "Numressource")
 	private int numRessource;
@@ -85,13 +84,6 @@ public class Ressource {
 		this.numRessource = numRessource;
 	}
 
-	public String getMarque() {
-		return marque;
-	}
-
-	public void setMarque(String marque) {
-		this.marque = marque;
-	}
 
 	public Long getId() {
 		return id;

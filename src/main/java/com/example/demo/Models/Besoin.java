@@ -17,7 +17,7 @@ public class Besoin {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String description;
+
 	private String nom;
 	private Integer besoinID;
 	private Integer enseignantID;
@@ -42,15 +42,6 @@ public class Besoin {
 
 	// Getters et setters
 
-
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
 
 	public String getNom() {
 		return nom;

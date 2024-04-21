@@ -12,12 +12,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class ordinateur extends Ressource{
+public class ordinateur {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String marque;
-	private String ram;
+	private Integer ram;
 	private String cpu;
 	private String disqueDur;
 	private String ecran;
@@ -32,21 +32,12 @@ public class ordinateur extends Ressource{
 		this.ecran = ecran;
 	}
 
-	@Override
-	public String getMarque() {
-		return marque;
-	}
 
-	@Override
-	public void setMarque(String marque) {
-		this.marque = marque;
-	}
-
-	public String getRam() {
+	public Integer getRam() {
 		return ram;
 	}
 
-	public void setRam(String ram) {
+	public void setRam(Integer ram) {
 		this.ram = ram;
 	}
 
@@ -66,12 +57,18 @@ public class ordinateur extends Ressource{
 		this.disqueDur = disqueDur;
 	}
 
-	@Override
+	public String getMarque() {
+		return marque;
+	}
+
+	public void setMarque(String marque) {
+		this.marque = marque;
+	}
+
 	public Long getId() {
 		return id;
 	}
 
-	@Override
 	public void setId(Long id) {
 		this.id = id;
 	}
