@@ -4,13 +4,6 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
-
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 @Entity
 public class Besoin {
 	@Id
@@ -23,8 +16,8 @@ public class Besoin {
 	private Integer enseignantID;
 	private Integer quantite; // Nouvel attribut
 
-	private Long ordinateurId; // Champ pour stocker l'ID de l'ordinateur
-	private Long imprimanteId; // Champ pour stocker l'ID de l'imprimante
+	private Integer OrdinateurID; // Champ pour stocker l'ID de l'ordinateur
+	private Integer ImprimanteID; // Champ pour stocker l'ID de l'imprimante
 
 	public Besoin() {
 	}
@@ -52,20 +45,20 @@ public class Besoin {
 	}
 
 
-	public Long getOrdinateurId() {
-		return ordinateurId;
+	public Integer getOrdinateurId() {
+		return OrdinateurID;
 	}
 
-	public void setOrdinateurId(Long ordinateurId) {
-		this.ordinateurId = ordinateurId;
+	public void setOrdinateurId(Long OrdinateurID) {
+		this.OrdinateurID = Math.toIntExact(OrdinateurID);
 	}
 
-	public Long getImprimanteId() {
-		return imprimanteId;
+	public Integer getImprimanteId() {
+		return ImprimanteID;
 	}
 
-	public void setImprimanteId(Long imprimanteId) {
-		this.imprimanteId = imprimanteId;
+	public void setImprimanteId(Long ImprimanteID) {
+		this.ImprimanteID = Math.toIntExact(ImprimanteID);
 	}
 
 	public Integer getBesoinID() {
