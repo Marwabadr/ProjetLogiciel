@@ -1,5 +1,8 @@
 package com.example.demo.Models;
 
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
 import javax.persistence.*;
 
 

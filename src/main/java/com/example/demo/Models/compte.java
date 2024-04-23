@@ -1,7 +1,8 @@
 package com.example.demo.Models;
 
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 /**
  * @author Lenovo
