@@ -1,21 +1,21 @@
 package com.example.demo.Models;
 
+import javax.persistence.*;
 
-/**
- * @author Lenovo
- * @version 1.0
- * @created 19-avr.-2024 14:25:09
- */
-public class Fournisseur extends personne {
+@Entity
+public class Fournisseur {
+	@Id
+	private int FournisseurID;
 
-	public Ressource m_Ressource;
-	public Societe m_Societe;
-
-	public Fournisseur(){
-
+	public Fournisseur() {
+		// Constructeur par défaut nécessaire pour Hibernate
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	public void setId(int id) {
+		this.FournisseurID = id;
 	}
-}//end Fournisseur
+
+	public int getId() {
+		return FournisseurID;
+	}
+}

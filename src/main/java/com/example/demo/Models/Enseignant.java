@@ -14,7 +14,7 @@ public class Enseignant extends personne { // Assurez-vous que la classe Enseign
 	@Column(name = "DepartementID") // Spécifie le nom de la colonne du département ID
 	private Integer departementID;
 
-	@Column(name = "nomEnseignant") // Spécifie le nom de la colonne du nom de l'enseignant
+	@Column(name = "Nom") // Spécifie le nom de la colonne du nom de l'enseignant
 	private String nomEnseignant; // Ajoute la nouvelle colonne nomEnseignant
 
 	// Constructeur par défaut

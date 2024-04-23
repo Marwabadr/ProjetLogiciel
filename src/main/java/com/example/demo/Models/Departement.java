@@ -1,31 +1,39 @@
 package com.example.demo.Models;
 
+import javax.persistence.*;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-/**
- * @author Lenovo
- * @version 1.0
- * @created 19-avr.-2024 14:25:12
- */
+@Entity
 public class Departement {
-
-	private int budget;
-	public Ressource m_Ressource;
-	public Enseignant m_Enseignant;
 	@Id
-	private Long id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long DepartementID;
 
-	public Departement(){
+	private String Nom; // Ajout du champ 'Nom'
 
+	private Integer Budget;
+
+	// Getters and setters
+	public Long getDepartementID() {
+		return DepartementID;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setDepartementID(Long departementID) {
+		DepartementID = departementID;
 	}
 
-	public Long getId() {
-		return id;
+	public String getNom() {
+		return Nom;
 	}
-}//end Departement
+
+	public void setNom(String nom) {
+		Nom = nom;
+	}
+
+	public Integer getBudget() {
+		return Budget;
+	}
+
+	public void setBudget(Integer budget) {
+		Budget = budget;
+	}
+}

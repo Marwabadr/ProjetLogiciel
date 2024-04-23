@@ -1,3 +1,4 @@
+/*
 package com.example.demo.Controllers;
 
 import com.example.demo.Models.ordinateur;
@@ -40,8 +41,11 @@ public class RessourceController {
             return "Type de ressource non pris en charge";
         }
 
-        /*Long id = equipementService.ajouterRessource(ressource);*/
+        /*Long id = equipementService.ajouterRessource(ressource);
         return "Ressource ajoutée avec succès, ID: " + id;
     }
-}
+            }
 
+
+
+* */

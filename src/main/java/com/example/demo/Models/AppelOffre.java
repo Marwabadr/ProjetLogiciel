@@ -1,22 +1,33 @@
 package com.example.demo.Models;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
-
 @Entity
-@Table(name = "appeloffre")
+@Table(name="appeloffre")
 public class AppelOffre {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int AppeloffreID;
 
     private Date Date_debut;
     private Date Date_fin;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int  AppeloffreID;
+    @Column(name = "Etat")
+    private String etat;
+
+
+    @ManyToOne
+    @JoinColumn(name = "FournisseurID")
+    private Fournisseur fournisseur;
+
+    // Getters and setters
+
+    public int getAppeloffreID() {
+        return AppeloffreID;
+    }
+
+    public void setAppeloffreID(int appeloffreID) {
+        AppeloffreID = appeloffreID;
+    }
 
     public Date getDate_debut() {
         return Date_debut;
@@ -34,19 +45,20 @@ public class AppelOffre {
         Date_fin = date_fin;
     }
 
-    public int getAppeloffreID() {
-        return AppeloffreID;
+    public String getEtat() {
+        return etat;
     }
 
-    public void setAppeloffreID(int appeloffreID) {
-        AppeloffreID = appeloffreID;
+    public void setEtat(String etat) {
+        this.etat = etat;
     }
 
-    public int getAppelOffreId() {
-        return  AppeloffreID;
+    public Fournisseur getFournisseur() {
+        return fournisseur;
     }
 
-    public void setAppelOffreId(int appelOffreId) {
-        this. AppeloffreID = appelOffreId;
+    public void setFournisseur(Fournisseur fournisseur) {
+        this.fournisseur = fournisseur;
     }
+
 }

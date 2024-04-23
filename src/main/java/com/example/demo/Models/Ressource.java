@@ -10,16 +10,17 @@ public class Ressource {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-
+	@Column(name = "Marque")
+	private String marque;
 
 	@Column(name = "Numressource")
-	private int numRessource;
+	private Integer numRessource;
 
 	@Column(name = "RessourceID")
-	private int ressourceId;
+	private Integer ressourceId;
 
 	@Column(name = "AppeloffreID")
-	private int appeloffreId;
+	private Integer appeloffreId;
 
 	@Column(name = "DepartementID")
 	private Integer departementId;  // Nullable
@@ -28,7 +29,7 @@ public class Ressource {
 	private Integer enseignantId;   // Nullable
 
 	@Column(name = "FournisseurID")
-	private int fournisseurId;
+	private Integer fournisseurId;
 
 	// Getter and Setter methods
 
@@ -84,6 +85,13 @@ public class Ressource {
 		this.numRessource = numRessource;
 	}
 
+	public String getMarque() {
+		return marque;
+	}
+
+	public void setMarque(String marque) {
+		this.marque = marque;
+	}
 
 	public Long getId() {
 		return id;

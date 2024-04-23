@@ -20,7 +20,7 @@ public class besoinEnsController {
     private  BesoinEnsService besoinService;
     private static final Logger logger = LoggerFactory.getLogger(besoinEnsController.class);
 
-
+/*
     @PostMapping("/enseignant1")
     public String ajouterBesoin(HttpServletRequest request) {
         String nom = request.getParameter("nom");
@@ -74,6 +74,6 @@ public class besoinEnsController {
         model.addAttribute("enseignant1", new Besoin());
         return "enseignant1"; // Le nom de votre fichier enseignant1.html sans l'extension
     }
-
+*/
 
 }

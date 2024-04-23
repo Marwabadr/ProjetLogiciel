@@ -1,87 +1,94 @@
 package com.example.demo.Models;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
+import javax.persistence.*;
+
 
 @Entity
+@Table(name = "besoin")
 public class Besoin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private int BesoinID;
 
+	private String Nom;
+	private Integer ImprimanteID;
+	private Integer OrdinateurID;
+	private Integer  EnseignantID;
+	private String Marque;
+	@Column(name = "Etat")
+	private String etat;
 
-	private String nom;
-	private Integer besoinID;
-	private Integer enseignantID;
-	private Integer quantite; // Nouvel attribut
+	private String description;
 
-	private Integer OrdinateurID; // Champ pour stocker l'ID de l'ordinateur
-	private Integer ImprimanteID; // Champ pour stocker l'ID de l'imprimante
+	public int getBesoinID() {
+		return BesoinID;
+	}
+
+	public void setBesoinID(int besoinID) {
+		BesoinID = besoinID;
+	}
 
 	public Besoin() {
 	}
 
-	public Long getId() {
-		return id;
+	public String getMarque() {
+		return Marque;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-
-
-
-	// Getters et setters
-
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setMarque(String marque) {
+		Marque = marque;
 	}
 
 
-	public Integer getOrdinateurId() {
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public int getEnseignantID() {
+		return EnseignantID;
+	}
+
+	public void setEnseignantID(int enseignantID) {
+		EnseignantID = enseignantID;
+	}
+
+	public String getEtat() {
+		return etat;
+	}
+
+	public void setEtat(String etat) {
+		etat = etat;
+	}
+
+	public int getOrdinateurID() {
 		return OrdinateurID;
 	}
 
-	public void setOrdinateurId(Long OrdinateurID) {
-		this.OrdinateurID = Math.toIntExact(OrdinateurID);
+	public void setOrdinateurID(int ordinateurID) {
+		OrdinateurID = ordinateurID;
 	}
 
-	public Integer getImprimanteId() {
+	public int getImprimanteID() {
 		return ImprimanteID;
 	}
 
-	public void setImprimanteId(Long ImprimanteID) {
-		this.ImprimanteID = Math.toIntExact(ImprimanteID);
+	public void setImprimanteID(int imprimanteID) {
+		ImprimanteID = imprimanteID;
 	}
 
-	public Integer getBesoinID() {
-		return besoinID;
+	public String getNom() {
+		return Nom;
 	}
 
-	public void setBesoinID(Integer besoinID) {
-		this.besoinID = besoinID;
+	public void setNom(String nom) {
+		Nom = nom;
 	}
 
-	public Integer getEnseignantID() {
-		return enseignantID;
-	}
 
-	public void setEnseignantID(Integer enseignantID) {
-		this.enseignantID = enseignantID;
-	}
-
-	public Integer getQuantite() {
-		return quantite;
-	}
-
-	public void setQuantite(Integer quantite) {
-		this.quantite = quantite;
-	}
+	// Getters and setters
 }
+
